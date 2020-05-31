@@ -16,6 +16,4 @@ class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
                 .antMatchers("/foodCart/**").permitAll()
                 .antMatchers("*/**").permitAll()
     }
-
-
 }
