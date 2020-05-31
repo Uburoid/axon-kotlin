@@ -7,7 +7,7 @@ val hsqlVersion: String by project
 val jupiterVersion: String by project
 
 plugins {
-    val kotlinVersion = "1.3.50"
+    val kotlinVersion = "1.3.72"
     application
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
@@ -32,7 +32,12 @@ dependencies {
         kotlin("reflect"),
         "org.springframework.boot:spring-boot-starter-data-jpa",
         "org.springframework.boot:spring-boot-starter-web",
-        "org.axonframework:axon-spring-boot-starter:$axonVersion"
+        "org.springframework.boot:spring-boot-starter-security",
+//        "org.axonframework:axon-spring-boot-autoconfigure",
+        "org.axonframework:axon-spring-boot-starter:$axonVersion",
+        "com.fasterxml.jackson.module:jackson-module-kotlin",
+        "org.springdoc:springdoc-openapi-ui:1.3.4",
+        "org.springdoc:springdoc-openapi-kotlin:1.3.4"
     )
         .forEach { implementation(it) }
 
